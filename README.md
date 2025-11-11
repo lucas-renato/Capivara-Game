@@ -21,7 +21,6 @@ O banco de dados é responsável por armazenar usuários, partidas, jogadas e re
 - **psycopg2** – integração com o banco  
 - **python-dotenv** – variáveis de ambiente  
 - **prettytable** – visualização no terminal  
-
 ---
 
 ## ⚙️ Funcionalidades
