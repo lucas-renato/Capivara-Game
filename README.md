@@ -17,7 +17,7 @@ O banco de dados é responsável por armazenar usuários, partidas, jogadas e re
 ## 🧱 Tecnologias
 
 - **Python 3.14.0**
-- **PostgreSQL 12+**
+- **PostgreSQL**
 - **psycopg2** – integração com o banco  
 - **python-dotenv** – variáveis de ambiente  
 - **prettytable** – visualização no terminal  
