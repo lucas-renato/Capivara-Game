@@ -2,7 +2,6 @@
 
 **Capivara Game** é um sistema de simulação do jogo de **Dominó**, desenvolvido em **Python** com integração ao **PostgreSQL**.  
 O objetivo é permitir partidas automatizadas entre jogadores, com controle de pontuação, histórico e ranking geral.
-
 ---
 
 ## 🎮 Sobre o projeto
