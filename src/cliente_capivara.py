@@ -160,3 +160,10 @@ if __name__ == '__main__':
     parser.add_argument('--players', type=int, default=4, choices=[2,3,4])
     args = parser.parse_args()
     run_simulation(args.players)
+
+if __name__ == '__main__':
+    run_simulation(4)           # Executa a simulação com 4 jogadores por padrão
+    run_simulation(2)           # Executa a simulação com 2 jogadores
+    run_simulation(3)           # Executa a simulação com 3 jogadores
+    run_simulation(4)           # Executa a simulação com 4 jogadores novamente
+        
