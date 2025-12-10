@@ -160,10 +160,25 @@ if __name__ == '__main__':
     parser.add_argument('--players', type=int, default=4, choices=[2,3,4])
     args = parser.parse_args()
     run_simulation(args.players)
+import os
+import random   
 
-if __name__ == '__main__':
-    run_simulation(4)           # Executa a simulação com 4 jogadores por padrão
-    run_simulation(2)           # Executa a simulação com 2 jogadores
-    run_simulation(3)           # Executa a simulação com 3 jogadores
-    run_simulation(4)           # Executa a simulação com 4 jogadores novamente
-        
+def show_summary(self):
+        with get_conn() as conn:
+            with conn.cursor() as cur:
+                cur.execute("SET search_path TO capivara, public;")
+
+                print("\nResumo da Partida:")
+                cur.execute("""
+                    SELECT partida_id, estado, data_inicio, data_fim 
+                    FROM partida WHERE partida_id=%s
+                """, (self.partida_id,))
+                print(cur.fetchone())
+
+                print("\nPontuação:")
+                cur.execute("""
+                    SELECT dupla, pontos FROM pontuacao_partida
+                    WHERE partida_id=%s
+                """, (self.partida_id,))
+                for d,p in cur.fetchall():
+                    print(f"Dupla {d}: {p} pontos") 
